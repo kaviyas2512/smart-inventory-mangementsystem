@@ -1,0 +1,53 @@
+ <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Sales & Purchase Reports</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
+     <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}"> 
+</head> 
+<body> 
+ 
+<div class="navbar"> 
+    <h1>Sales & Purchase Reports</h1> 
+</div> 
+<br> 
+<br> 
+<br> 
+ 
+<div class="container"> 
+    <h2>Overall Sales and Purchase Summary</h2>
+     <div class="report-section"> 
+        <div class="report-box"> 
+            <h3><i class="fas fa-shopping-cart"></i> Total Sales</h3> 
+            <p><i class="fas fa-indian-rupee-sign"></i> 50,000</p> 
+        </div> 
+        <div class="report-box"> 
+            <h3><i class="fas fa-truck"></i> Total Purchases</h3> 
+            <p><i class="fas fa-indian-rupee-sign"></i> 30,000</p> 
+        </div> 
+    </div> 
+ 
+    <div class="report-section"> 
+        <div class="report-box"> 
+            <h3><i class="fas fa-dollar-sign"></i> Profit</h3> 
+<p><i class="fas fa-indian-rupee-sign"></i> 20,000</p> 
+        </div> 
+        <div class="report-box"> 
+            <h3><i class="fas fa-exclamation-triangle"></i> Low Stock Items</h3> 
+            <h3>{{ low_stock_count }}</h3> 
+        </div> 
+    </div> 
+     <div class="report-section"> 
+        <div class="report-box"> 
+                <h3><i class="fas fa-exclamation-triangle"></i> Expiring Soon Items</h3> 
+            <h3>{{ expiring_soon }}</h3> 
+        </div> 
+     </div> 
+ 
+    <a href="/dashboard" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Dashboard</a> 
+</div> 
+ 
+</body> 
+</html>  

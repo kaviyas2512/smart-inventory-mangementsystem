@@ -1,0 +1,74 @@
+ <!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Dashboard</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all. 
+min.css">  
+     <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}"> 
+</head> 
+<body> 
+ 
+<!-- Navbar --> 
+<div class="navbar"> 
+    <h1>Smart Inventory Management System</h1> 
+    <a href="/logout">Logout *</a> 
+</div> 
+ 
+<!-- Sidebar --> 
+<div class="sidebar"> 
+    <h3 style="text-align: center;">Dashboard</h3> 
+    <a href="/dashboard"><i class="fas fa-home"></i> Home</a> 
+    <a href="/example"><i class="fas fa-boxes"></i> Products</a> 
+    <a href="/reorders"><i class="fas fa-shopping-cart"></i> Reorders</a> 
+    <a href="/reports"><i class="fas fa-chart-line"></i> Reports</a> 
+</div> 
+ 
+<br> 
+<br>
+<br> 
+ 
+<!-- Main Content --> 
+<div class="content"> 
+        <h2><B>Welcome to SK Supermarket</B></h2> 
+        <br> 
+        <br> 
+ 
+    <div class="card-container"> 
+        <div class="card"> 
+                      <i class="fas fa-box"></i> 
+            <h4>Total Products</h4> 
+            <h3>{{Product_id}}</h3> 
+        </div> 
+ 
+        <div class="card"> 
+            <i class="fas fa-exclamation-triangle"></i> 
+            <h4>Low Stock</h4> 
+            <h3>{{low_stock_count}}</h3> 
+        </div> 
+ 
+        <div class="card"> 
+            <i class="fas fa-shopping-cart"></i> 
+            <h4>Reorders Pending</h4> 
+            <h3>{{reorder_pending}}</h3> 
+        </div> 
+ 
+        <div class="card"> 
+            <i class="fas fa-indian-rupee-sign"></i> 
+            <h4>Sales Today</h4> 
+            <p>500</p> 
+        </div>
+         <br> 
+        <br> 
+        <br> 
+    </div> 
+ 
+    <button class="btn" onclick="window.location.href='/example'"> 
+            <i class="fas fa-list"></i> View Supermarket Products List 
+    </button> 
+ 
+</div> 
+ 
+</body> 
+</html> 

@@ -1,0 +1,69 @@
+ <!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Supermarket Stock</title> 
+  <linkrel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.0.0/css/all. 
+min.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+</head> 
+<body> 
+    <h1><i class="fas fa-store"></i>Supermarket Products List<i class= "fas fa-store"></i></h1> 
+     <br> 
+     <br> 
+    <table id="stockTable"> 
+        <tr> 
+            <th>Product</th> 
+            <th>Category</th> 
+            <th>Price</th> 
+            <th>Quantity</th>
+             <th>Total Stock</th> 
+            <th>Expiry Date</th> 
+            <th>Status</th> 
+        </tr> 
+        {% for Product in Products %} 
+        <tr> 
+            <td>{{ Product.Product }}</td> 
+            <td>{{ Product.Category }}</td> 
+            <td>{{ Product.Price }}</td> 
+            <td>{{ Product.Quantity }}</td> 
+            <td class="total-stock">{{ Product.Totalstock }}</td> 
+            <td>{{ Product.Expirydate }}</td> 
+            <td class="status-cell"></td> <!-- JavaScript will add color and text here --> 
+        </tr> 
+        {% endfor %} 
+    </table> 
+     
+    <a href="/dashboard" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Dashboard 
+</a> 
+ 
+    <script> 
+        document.addEventListener("DOMContentLoaded", function() { 
+            let overstockThreshold = { overstock_threshold }; 
+            let understockThreshold = { understock_threshold }; 
+ 
+            let rows = document.querySelectorAll("#stockTable tr"); 
+            rows.forEach((row, index) => { 
+                if (index === 0) return; // Skip header row 
+ 
+                let stockCell = row.querySelector(".total-stock"); 
+                let statusCell = row.querySelector(".status-cell");
+                 if (stockCell && statusCell) { 
+                    let stockValue = parseInt(stockCell.textContent.trim()); 
+ 
+                    if (stockValue > overstockThreshold) { 
+                        statusCell.classList.add("status-overstock"); 
+                        statusCell.textContent = "Overstock"; 
+                    } else if (stockValue < understockThreshold) { 
+                        statusCell.classList.add("status-understock"); 
+                        statusCell.textContent = "Understock"; 
+                    } else { 
+                        statusCell.classList.add("status-regular"); 
+                        statusCell.textContent = "Regular Stock"; 
+                    } 
+                } 
+            });
+        });
+
+    </script> 
+</body> 
+</html> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Reorder Requests</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+<link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}"> 
+</head> 
+<body> 
+ 
+<div class="navbar"> 
+    <h1>Reorder Requests</h1>
+    </div> 
+ 
+<div class="container"> 
+    <h2>Pending Reorders</h2> 
+    <table> 
+        <thead> 
+            <tr> 
+                <th>Reorder ID</th> 
+                <th>Product ID</th> 
+                <th>Total Stock</th> 
+                <th>Status</th> 
+                <th>Actions</th> 
+            </tr> 
+            {% for reorder in reorders %} 
+        <tr> 
+            <td>{{ reorder.reorder_id }}</td> 
+            <td>{{ reorder.product_id }}</td> 
+            <td>{{ reorder.total_stock }}</td> 
+            <td>{{ reorder.status }}</td> 
+            <td> 
+                <button class="btn approve"onclick="approveReorder ({{ reorder.reorder_id }})"> Approve 
+</button> 
+                <button class="btn reject" onclick="rejectReorder({ reorderreorder_id })">Reject</button> 
+            </td> 
+        </tr> 
+        {% endfor %} 
+        </thead> 
+        <tbody id="reordersTable"> 
+        <!-- Data will be inserted dynamically --> 
+        </tbody> 
+    </table> 
+ 
+    <a href="/dashboard" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Dashboard</a> 
+</div>
+<script> 
+function approveReorder(reorderId) { 
+    fetch('/approve_reorder/' + reorderId, { method: 'POST' }) 
+        .then(response => location.reload()); 
+} 
+ 
+function rejectReorder(reorderId) { 
+    fetch('/reject_reorder/' + reorderId, { method: 'POST' }) 
+        .then(response => location.reload()); 
+} 
+</script> 
+</body> 
+</html>    

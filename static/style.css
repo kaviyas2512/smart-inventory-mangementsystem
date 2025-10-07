@@ -1,0 +1,260 @@
+ 
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+    margin: 20; 
+    padding: 30; 
+} 
+form { 
+    display: inline-block; 
+    text-align: left; 
+} 
+input { 
+    width: 90%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 10px; 
+    border-bottom: 2px solid #ccc; 
+    transition: border-bottom 0.3s; 
+} 
+h1 { 
+    text-align: center; 
+} 
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px auto; 
+} 
+table, th, td { 
+    border: 1px solid #ddd; 
+} 
+th, td { 
+    padding: 12px;
+    text-align: center; 
+    border-bottom: 1px solid #ddd; 
+} 
+th { 
+    background-color: #4CAF50; 
+    border-radius: 6px; 
+    color: #333; 
+} 
+.approve-btn, .reject-btn { 
+    padding: 8px 12px; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 5px; 
+} 
+.approve-btn { 
+    background-color: #28a745; 
+} 
+.reject-btn { 
+    background-color: #dc3545; 
+} 
+.approve-btn:hover { 
+    background-color: #218838; 
+} 
+.reject-btn:hover { 
+    background-color: #c82333; 
+} 
+tr:nth-child(even) { 
+    background-color: #87CEEB; 
+} 
+tr:hover { 
+    background-color: #f1f1f1; 
+} 
+/* Status column styling */ 
+.status-overstock {
+    padding: 1px; 
+    border-radius: 90%; 
+    background-color: #FF0000; 
+    color: #b30021; 
+    font-weight: bold; 
+} 
+.status-understock { 
+    padding: 1px; 
+    border-radius: 90%; 
+    background-color: #FFFF00; 
+    color: #00008B; 
+    font-weight: bold; 
+} 
+.status-regular { 
+    padding: 1px; 
+    border-radius: 90%; 
+    background-color: #86e49d; 
+    color: #006b21; 
+    font-weight: bold; 
+} 
+.back-btn { 
+    display: inline-block; 
+    margin-top: 20px; 
+    padding: 10px 15px; 
+    background: #4CAF50; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 5px; 
+    text-align: center; 
+    width: 150px; 
+} 
+button { 
+    background-color: #008000; 
+    color: white; 
+    padding: 10px;
+    border-radius: 10px; 
+    cursor: pointer; 
+} 
+.login-container { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 30px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+    width: 350px; 
+} 
+.navbar { 
+    background-color: #4CAF50; 
+    padding: 15px; 
+    color: white; 
+    border-radius: 60px; 
+    text-align: center; 
+    font-size: 20px; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+} 
+.container { 
+    margin: 80px auto; 
+    width: 90%; 
+    max-width: 1000px; 
+    background: white;
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+} 
+h2 { 
+    text-align: center;
+    color: #333; 
+} 
+ 
+.report-section { 
+    display: flex; 
+    justify-content: space-around; 
+    margin-top: 20px; 
+} 
+.report-box { 
+    background: #4CAF50; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center; 
+    width: 45%; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
+} 
+
+.report-box h3 { 
+    margin: 0; 
+    font-size: 22px; 
+} 
+
+.report-box p { 
+    font-size: 18px; 
+    margin-top: 5px; 
+} 
+
+.back-btn:hover { 
+    background: #388E3C; 
+} 
+
+.navbar a { 
+    float: right;
+    color: white; 
+    margin-right: 20px; 
+    font-size: 16px; 
+} 
+ 
+.sidebar { 
+    width: 250px; 
+    height: 100vh; 
+    background: #343a40; 
+    color: white; 
+    border-radius: 8px; 
+    position: fixed; 
+    top: 50px; 
+    left: 0; 
+    padding-top: 20px; 
+} 
+
+.sidebar a { 
+    display: block; 
+    color: white; 
+    padding: 15px; 
+    text-decoration: none; 
+    font-size: 18px; 
+} 
+.sidebar a:hover { 
+    background: #4CAF50; 
+} 
+.content { 
+    padding: 20px; 
+    text-align: center; 
+    margin-top: 70px; 
+} 
+
+.card-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: right; /* Centers the cards */ 
+    align-items: right; 
+} 
+
+.card { 
+    background: white; 
+    width: 200px; 
+    padding: 15px; 
+    text-align: center; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s; 
+} 
+
+.card:hover { 
+    transform: scale(1.05); 
+} 
+ 
+.card i { 
+    font-size: 2rem; 
+    color: #4CAF50; 
+    margin-bottom: 10px; 
+} 
+.btn { 
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 12px 20px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    margin-top: 20px; 
+    display: inline-block;
+} 
+ 
+.btn:hover { 
+    background-color: #388E3C; 
+} 
+
+@media (max-width: 768px) {
+    .sidebar { 
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+    } 
+    .content { 
+        margin-left: 0; 
+        padding: 10px; 
+    } 
+    .card-container { 
+        flex-direction: column; 
+        align-items: center;
+    }
+}
