@@ -1,4 +1,4 @@
-# smart-inventory-mangementsystem
+## smart-inventory-management system
 # Overview
 
       The Smart Inventory Management System (SIMS) is a web-based application developed to improve inventory handling in supermarkets. Traditional inventory systems rely heavily on manual processes, which often lead to errors, delays, and lack of real-time visibility.
@@ -42,7 +42,8 @@ The system is divided into the following modules:
     Database: MySQL (AWS RDS)
     Cloud Services: AWS EC2, AWS SNS
     Operating System: Amazon Linux 2
-Installation and Setup
+
+## Installation and Setup
     
 # Clone the repository
     git clone https://github.com/your-username/smart-inventory-system.git
@@ -50,7 +51,8 @@ Installation and Setup
 
 # Install dependencies
     pip install flask mysql-connector-python boto3
-    Configure database
+    
+## Configure database
 
 # Update the database configuration in the application:
 
@@ -80,6 +82,7 @@ Installation and Setup
     Advanced reporting and analytics
     Bulk data import/export support
     Integration with POS systems
-    Conclusion
 
-The Smart Inventory Management System provides a structured and efficient solution to modern inventory challenges in supermarkets. By combining automation, real-time monitoring, and cloud-based communication, the system significantly improves operational efficiency and decision-making.
+## Conclusion
+
+      The Smart Inventory Management System provides a structured and efficient solution to modern inventory challenges in supermarkets. By combining automation, real-time monitoring, and cloud-based communication, the system significantly improves operational efficiency and decision-making.
