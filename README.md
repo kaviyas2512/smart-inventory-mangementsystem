@@ -1,11 +1,11 @@
-## smart-inventory-management system
-# Overview
+# smart-inventory-management-system
+## Overview
 
       The Smart Inventory Management System (SIMS) is a web-based application developed to improve inventory handling in supermarkets. Traditional inventory systems rely heavily on manual processes, which often lead to errors, delays, and lack of real-time visibility.
 
       This system introduces an automated and intelligent approach to inventory management by continuously monitoring stock levels and product expiry dates. It provides timely notifications to administrators and suppliers, helping businesses make proactive decisions and reduce operational inefficiencies.
 
-# Features
+## Features
    Real-time monitoring of product stock levels
    Detection of understock and overstock conditions
    Expiry date tracking with advance alerts
@@ -15,7 +15,7 @@
    Secure login and session management
    System Architecture
 
-# The application follows a three-tier architecture:
+## The application follows a three-tier architecture:
 
     Presentation Layer: User interface built using HTML, CSS, and JavaScript
     Application Layer: Backend logic implemented using Flask (Python)
@@ -23,7 +23,7 @@
 
 The architecture enables seamless interaction between the web application, database, and notification services, ensuring scalability and efficiency.
 
-# Modules
+## Modules
 
 The system is divided into the following modules:
 
@@ -36,25 +36,25 @@ The system is divided into the following modules:
     Database Connection Module
     Session and Logout Module
     
-# Technology Stack
+## Technology Stack
     Frontend: HTML, CSS, JavaScript
     Backend: Python (Flask)
     Database: MySQL (AWS RDS)
     Cloud Services: AWS EC2, AWS SNS
     Operating System: Amazon Linux 2
 
-## Installation and Setup
+# Installation and Setup
     
-# Clone the repository
+## Clone the repository
     git clone https://github.com/your-username/smart-inventory-system.git
     cd smart-inventory-system
 
-# Install dependencies
+## Install dependencies
     pip install flask mysql-connector-python boto3
     
-## Configure database
+# Configure database
 
-# Update the database configuration in the application:
+## Update the database configuration in the application:
 
     DB_HOST = "your-rds-endpoint"
     DB_USER = "username"
@@ -64,10 +64,10 @@ The system is divided into the following modules:
     AWS_REGION = "your-region"
     SNS_TOPIC_ARN = "your-topic-arn"
 
-# Run the application
+## Run the application
     python app.py
 
-# Key Benefits
+## Key Benefits
     Improves inventory accuracy through automation
     Provides real-time visibility of stock levels
     Reduces product wastage due to expiry
@@ -83,6 +83,6 @@ The system is divided into the following modules:
     Bulk data import/export support
     Integration with POS systems
 
-## Conclusion
+# Conclusion
 
       The Smart Inventory Management System provides a structured and efficient solution to modern inventory challenges in supermarkets. By combining automation, real-time monitoring, and cloud-based communication, the system significantly improves operational efficiency and decision-making.
